@@ -24,7 +24,7 @@ const Friends = memo(props => {
   const onViewDetailClicked = id => {
     const friend = friends.find(f => f.Id === id);
     navigate(ADD_FRIEND, {
-      friend: friends.find(f => f.Id === id),
+      friend: friend,
       isEdit: friend ? true : false,
     });
   };

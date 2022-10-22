@@ -44,7 +44,7 @@ const AddEditFriend = memo(props => {
     }
     const payload = [
       {
-        ...mFriend,
+        //...mFriend,
         ...friend,
       },
     ];

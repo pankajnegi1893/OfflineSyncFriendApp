@@ -22,7 +22,6 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       isConnected: true,
-      initialUrl: '',
       loading: false,
     };
     this.friendTable = new FriendTable();

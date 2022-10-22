@@ -50,6 +50,9 @@
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) need camera permission.</string>
+	
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
