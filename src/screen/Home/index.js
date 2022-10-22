@@ -17,7 +17,7 @@ const Home = memo(props => {
     }).then(image => {
       console.log(image);
       images.push(image);
-      setImages(images);
+      setImages([...images]);
     });
   };
 
@@ -47,10 +47,6 @@ const Home = memo(props => {
     );
   };
 
-  useEffect(() => {
-    return () => {};
-  }, []);
-
   return (
     <View style={[globalStyles.container, globalStyles.itemsCenter]}>
       {displayImage && (
@@ -71,7 +67,11 @@ const Home = memo(props => {
         </Text>
       </TouchableOpacity>
       <TouchableOpacity
-        style={[globalStyles.addBtnStyle, globalStyles.itemsCenter]}
+        style={[
+          globalStyles.addBtnStyle,
+          globalStyles.itemsCenter,
+          {marginVertical: Metrics.rfv(20)},
+        ]}
         onPress={() => setDisplayImage(!displayImage)}>
         <Text
           style={{
